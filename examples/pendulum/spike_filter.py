@@ -5,7 +5,7 @@ from functools import partial
 import pyNN.spiNNaker as p
 from matplotlib import pyplot, colors
 from matplotlib.patches import Rectangle
-from spynnaker.pyNN.utilities.utility_calls import get_n_bits
+# from spynnaker.pyNN.utilities.utility_calls import get_n_bits
 from threading import Thread
 
 running = True

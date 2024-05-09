@@ -39,7 +39,6 @@ def make_kernel_circle(r, k_sz, weight, kernel):
     kernel[var + dx, var + dy] = weight
 
 
-
 def read_csv_line(f):
     line = f.readline()
     if not f:
