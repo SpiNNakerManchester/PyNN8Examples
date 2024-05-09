@@ -161,7 +161,8 @@ def recv_conv(label, time, spikes):
 
 
 conn = p.external_devices.SpynnakerLiveSpikesConnection(
-    receive_labels=[SEND_POP_LABEL, POP_LABEL], send_labels=[SEND_POP_LABEL], local_port=None)
+    receive_labels=[SEND_POP_LABEL, POP_LABEL], send_labels=[SEND_POP_LABEL],
+    local_port=None)
 conn.add_receive_callback(SEND_POP_LABEL, recv)
 conn.add_receive_callback(POP_LABEL, recv_conv)
 conn.add_start_callback(

@@ -39,7 +39,6 @@ def make_kernel_circle(r, k_sz, weight, kernel):
     kernel[var + dx, var + dy] = weight
 
 
-
 def read_csv_line(f):
     line = f.readline()
     if not f:
@@ -55,7 +54,7 @@ def send_spikes(width, height, min_x, min_y, run_time, label, connection):
     start_time = None
     max_x = min_x + width
     max_y = min_y + height
-    y_shift = get_n_bits(width)
+    # y_shift = get_n_bits(width)
     with open("spikes.csv") as f:
         first_time = -1
         line = read_csv_line(f)
@@ -71,9 +70,9 @@ def send_spikes(width, height, min_x, min_y, run_time, label, connection):
             line = next_line
 
             filtered_lines = [
-                l for l in same_time_lines
-                if (l.x >= min_x and l.x < max_x and l.y >= min_y and
-                    l.y < max_y)]
+                line for line in same_time_lines
+                if (line.x >= min_x and line.x < max_x and
+                    line.y >= min_y and line.y < max_y)]
 
             if not filtered_lines:
                 continue
@@ -161,11 +160,13 @@ def recv_conv(label, time, spikes):
 
 
 conn = p.external_devices.SpynnakerLiveSpikesConnection(
-    receive_labels=[SEND_POP_LABEL, POP_LABEL], send_labels=[SEND_POP_LABEL], local_port=None)
+    receive_labels=[SEND_POP_LABEL, POP_LABEL], send_labels=[SEND_POP_LABEL],
+    local_port=None)
 conn.add_receive_callback(SEND_POP_LABEL, recv)
 conn.add_receive_callback(POP_LABEL, recv_conv)
 conn.add_start_callback(
-    SEND_POP_LABEL, partial(send_spikes, WIDTH, HEIGHT, MIN_X, MIN_Y, RUN_TIME / 1000.0))
+    SEND_POP_LABEL, partial(
+        send_spikes, WIDTH, HEIGHT, MIN_X, MIN_Y, RUN_TIME / 1000.0))
 
 
 p.setup(1.0)
