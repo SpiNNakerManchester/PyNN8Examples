@@ -3,7 +3,7 @@ import tkinter.font as tkFont
 import sys
 import functools
 import pyNN.spiNNaker as p
-from sudoku.utils import puzzles, get_rates
+from examples.sudoku.utils import puzzles, get_rates
 
 
 class GUI(object):

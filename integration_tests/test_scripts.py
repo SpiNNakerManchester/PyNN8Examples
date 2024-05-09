@@ -102,6 +102,15 @@ class TestScripts(ScriptChecker):
     def test_examples_external_devices_examples_pushbot_spinnaker_link_example(self):
         self.check_script("examples/external_devices_examples/pushbot_spinnaker_link_example.py")
 
+    # Not testing file due to: Visualiser
+    # examples/pendulum/pendulum_follow_c_vis.py
+
+    # Not testing file due to: Uses pyplot
+    # examples/pendulum/spike_filter.py
+
+    # Not testing file due to: Uses pyplot
+    # examples/pendulum/pendulum_follow_python_vis.py
+
     def test_examples_if_curr_alpha(self):
         self.check_script("examples/if_curr_alpha.py")
 
@@ -116,6 +125,15 @@ class TestScripts(ScriptChecker):
 
     def test_examples_stdp_example_cond(self):
         self.check_script("examples/stdp_example_cond.py")
+
+    def test_examples_sudoku_set_numbers(self):
+        self.check_script("examples/sudoku/set_numbers.py")
+
+    def test_examples_sudoku_utils(self):
+        self.check_script("examples/sudoku/utils.py")
+
+    # Not testing file due to: Visualiser
+    # examples/sudoku/sudoku_main.py
 
     def test_examples_stdp_pairing(self):
         self.check_script("examples/stdp_pairing.py")
@@ -149,6 +167,36 @@ class TestScripts(ScriptChecker):
 
     def test_examples_stdp_example(self):
         self.check_script("examples/stdp_example.py")
+
+    def test_examples_synfire_synfire(self):
+        self.check_script("examples/synfire/synfire.py")
+
+    def test_examples_synfire_synfire_collab(self):
+        self.check_script("examples/synfire/synfire_collab.py")
+
+    def test_examples_learning_random_dist(self):
+        self.check_script("examples/learning/random_dist.py")
+
+    def test_examples_learning_stdp(self):
+        self.check_script("examples/learning/stdp.py")
+
+    def test_examples_learning_struct_pl(self):
+        self.check_script("examples/learning/struct_pl.py")
+
+    def test_examples_learning_split_struct_pl_stdp_split(self):
+        self.check_script("examples/learning/split/struct_pl_stdp_split.py")
+
+    def test_examples_learning_split_struct_pl_split(self):
+        self.check_script("examples/learning/split/struct_pl_split.py")
+
+    def test_examples_learning_split_stdp_split(self):
+        self.check_script("examples/learning/split/stdp_split.py")
+
+    def test_examples_learning_simple(self):
+        self.check_script("examples/learning/simple.py")
+
+    def test_examples_learning_struct_pl_stdp(self):
+        self.check_script("examples/learning/struct_pl_stdp.py")
 
     def test_examples_stdp_example_get_plastic_params(self):
         self.check_script("examples/stdp_example_get_plastic_params.py")
@@ -185,39 +233,3 @@ class TestScripts(ScriptChecker):
 
     def test_examples_extra_models_examples_IF_cond_exp_stoc(self):
         self.check_script("examples/extra_models_examples/IF_cond_exp_stoc.py")
-
-    def test_balanced_random_balanced_random(self):
-        self.check_script("balanced_random/balanced_random.py")
-
-    def test_balanced_random_split_balanced_random_split(self):
-        self.check_script("balanced_random/split/balanced_random_split.py")
-
-    def test_learning_random_dist(self):
-        self.check_script("learning/random_dist.py")
-
-    def test_learning_stdp(self):
-        self.check_script("learning/stdp.py")
-
-    def test_learning_struct_pl(self):
-        self.check_script("learning/struct_pl.py")
-
-    def test_learning_split_struct_pl_stdp_split(self):
-        self.check_script("learning/split/struct_pl_stdp_split.py")
-
-    def test_learning_split_struct_pl_split(self):
-        self.check_script("learning/split/struct_pl_split.py")
-
-    def test_learning_split_stdp_split(self):
-        self.check_script("learning/split/stdp_split.py")
-
-    def test_learning_simple(self):
-        self.check_script("learning/simple.py")
-
-    def test_learning_struct_pl_stdp(self):
-        self.check_script("learning/struct_pl_stdp.py")
-
-    def test_synfire_synfire(self):
-        self.check_script("synfire/synfire.py")
-
-    def test_synfire_synfire_collab(self):
-        self.check_script("synfire/synfire_collab.py")

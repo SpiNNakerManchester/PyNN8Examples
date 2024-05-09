@@ -27,7 +27,7 @@ from threading import Thread
 from pyNN.random import RandomDistribution
 import pyNN.spiNNaker as p
 import spynnaker.pyNN.external_devices as ext
-from sudoku.utils import puzzles, get_rates
+from examples.sudoku.utils import puzzles, get_rates
 
 run_time = 20000                        # run time in milliseconds
 neurons_per_digit = 5                   # number of neurons per digit

@@ -27,6 +27,10 @@ class ScriptBuilder(RootScriptBuilder):
         exceptions = {}
         exceptions["pushbot_ethernet_example.py"] = "Needs a physical pushbot"
         exceptions["pushbot_light_follower.py"] = "Runs forever"
+        exceptions["pendulum_follow_c_vis.py"] = "Visualiser"
+        exceptions["spike_filter.py"] = "Uses pyplot"
+        exceptions["pendulum_follow_python_vis.py"] = "Uses pyplot"
+        exceptions["sudoku_main.py"] = "Visualiser"
 
         # For branches these raise a SkipTest quoting the time given
         # For cron and manual runs these just and a warning
@@ -34,8 +38,7 @@ class ScriptBuilder(RootScriptBuilder):
         too_long["stdp_triplet.py"] = "10 minutes"
 
         self.create_test_scripts(
-            ["examples","balanced_random", "learning", "synfire"],
-            too_long, exceptions)
+            ["examples"], too_long, exceptions)
 
 
 if __name__ == '__main__':
