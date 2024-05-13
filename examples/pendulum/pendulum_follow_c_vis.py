@@ -10,6 +10,8 @@ import numpy
 import pyNN.spiNNaker as p
 from spynnaker.pyNN.models.utility_models.spike_injector import SpikeInjector
 
+# pylint: skip-file
+
 running = True
 
 

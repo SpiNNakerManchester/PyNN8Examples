@@ -8,6 +8,8 @@ from matplotlib.patches import Rectangle
 # from spynnaker.pyNN.utilities.utility_calls import get_n_bits
 from threading import Thread
 
+# pylint: skip-file
+
 running = True
 
 
